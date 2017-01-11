@@ -12,6 +12,7 @@
     <modules>
         <module>TopicSpider</module>
         <module>TopicCommon</module>
+        <module>TopicPojo</module>
     </modules>
 
 

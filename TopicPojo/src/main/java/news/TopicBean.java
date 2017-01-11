@@ -1,4 +1,4 @@
-package bean;
+package news;
 
 /**
  * @Author chenxl

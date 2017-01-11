@@ -1,6 +1,6 @@
 import basic.BasicSpider;
-import bean.NewsBean;
-import bean.TopicBean;
+import news.NewsBean;
+import news.TopicBean;
 import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;

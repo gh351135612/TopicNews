@@ -1,4 +1,4 @@
-package bean;
+package news;
 
 import java.util.Date;
 

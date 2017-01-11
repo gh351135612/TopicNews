@@ -1,7 +1,8 @@
 package inter;
 
-import bean.NewsBean;
-import bean.TopicBean;
+
+import news.NewsBean;
+import news.TopicBean;
 
 import java.util.List;
 import java.util.Map;

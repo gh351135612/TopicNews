@@ -1,8 +1,8 @@
 package basic;
 
-import bean.NewsBean;
-import bean.TopicBean;
 import inter.SpiderInterface;
+import news.NewsBean;
+import news.TopicBean;
 import okhttp3.*;
 import org.apache.log4j.Logger;
 import org.jsoup.Jsoup;

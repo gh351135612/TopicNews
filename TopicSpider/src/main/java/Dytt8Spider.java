@@ -1,6 +1,6 @@
 import basic.BasicSpider;
-import bean.NewsBean;
-import bean.TopicBean;
+import news.NewsBean;
+import news.TopicBean;
 import okhttp3.OkHttpClient;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
