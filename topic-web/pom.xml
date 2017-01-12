@@ -9,7 +9,25 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common</artifactId>
+    <artifactId>topic-web</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>topic-web-service</module>
+        <module>topic-web-controller</module>
+
+    </modules>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.sc</groupId>
+            <artifactId>topic-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+
+    </dependencies>
 
 
 </project>
