@@ -1,26 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>topic-web</artifactId>
         <groupId>com.sc</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>topic-web-controller</artifactId>
-    <packaging>war</packaging>
-    <name>topic-web-controller Maven Webapp</name>
-    <url>http://maven.apache.org</url>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    <build>
 
-        <finalName>topic-web-controller</finalName>
+    <packaging>war</packaging>
+
+    <artifactId>topic-web-controller</artifactId>
+
+
+    <build>
 
         <!-- 配置插件 -->
         <plugins>
@@ -33,5 +27,8 @@
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
+
+
 </project>
