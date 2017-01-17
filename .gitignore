@@ -18,4 +18,3 @@ hs_err_pid*
 *.iml
 *logs
 *out
-/topic-mapper/src/main/resources/resource/db.properties
