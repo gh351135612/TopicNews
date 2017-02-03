@@ -1,4 +1,4 @@
-package news;
+package pojo.news;
 
 import java.util.Date;
 

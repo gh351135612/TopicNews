@@ -1,6 +1,7 @@
-import basic.BasicSpider;
-import news.NewsBean;
-import news.TopicBean;
+import spider.basic.BasicSpider;
+import pojo.news.NewsBean;
+import pojo.news.TopicBean;
+import spider.Dytt8Spider;
 
 import java.io.IOException;
 import java.util.List;

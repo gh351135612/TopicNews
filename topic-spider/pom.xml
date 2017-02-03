@@ -27,13 +27,13 @@
 
         <dependency>
             <groupId>com.sc</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>topic-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.sc</groupId>
-            <artifactId>pojo</artifactId>
+            <artifactId>topic-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

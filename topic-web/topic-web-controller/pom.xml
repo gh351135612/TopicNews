@@ -14,6 +14,22 @@
     <artifactId>topic-web-controller</artifactId>
 
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.sc</groupId>
+            <artifactId>topic-web-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sc</groupId>
+            <artifactId>topic-mapper</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
     <build>
 
         <!-- 配置插件 -->

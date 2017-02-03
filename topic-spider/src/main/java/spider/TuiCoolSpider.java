@@ -1,6 +1,5 @@
-import basic.BasicSpider;
-import news.NewsBean;
-import news.TopicBean;
+package spider;
+
 import okhttp3.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,7 +8,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import util.PropertiesUtil;
+import pojo.news.NewsBean;
+import pojo.news.TopicBean;
+import spider.basic.BasicSpider;
+import util.spider.PropertiesUtil;
 
 import java.io.IOException;
 import java.text.MessageFormat;
@@ -55,7 +57,7 @@ public class TuiCoolSpider extends BasicSpider{
             if(title.equals("推荐文章 - 推酷")){
 
                 isAuthor = true;
-                logger.info("TuiCoolSpider" + "验证成功");
+                logger.info("spider.TuiCoolSpider" + "验证成功");
 
             }
 

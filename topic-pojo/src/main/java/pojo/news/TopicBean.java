@@ -1,4 +1,4 @@
-package news;
+package pojo.news;
 
 /**
  * @Author chenxl

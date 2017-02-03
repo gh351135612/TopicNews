@@ -1,6 +1,8 @@
-import basic.BasicSpider;
-import news.NewsBean;
-import news.TopicBean;
+package spider;
+
+import spider.basic.BasicSpider;
+import pojo.news.NewsBean;
+import pojo.news.TopicBean;
 import okhttp3.OkHttpClient;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;

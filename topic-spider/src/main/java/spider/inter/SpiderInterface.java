@@ -1,8 +1,8 @@
-package inter;
+package spider.inter;
 
 
-import news.NewsBean;
-import news.TopicBean;
+import pojo.news.NewsBean;
+import pojo.news.TopicBean;
 
 import java.util.List;
 import java.util.Map;

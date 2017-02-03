@@ -13,14 +13,14 @@
         <module>./topic-spider</module>
         <module>./topic-pojo</module>
         <module>./topic-common</module>
-        <module>./topic-mapper</module>
-        <module>topic-web</module>
+        <module>./topic-web</module>
 
     </modules>
 
     <!-- 集中定义依赖版本号 -->
     <properties>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <!-- spring版本号 -->
+        <spring.version>4.0.2.RELEASE</spring.version>
         <junit.version>4.12</junit.version>
         <json.version>20090211</json.version>
         <log4j.version>1.2.17</log4j.version>
@@ -102,12 +102,7 @@
                 <version>${mybatis-spring.version}</version>
             </dependency>
 
-            <!-- MySql -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
+
             <!-- 连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -156,7 +151,6 @@
 
 
     </dependencyManagement>
-
 
 
 </project>
