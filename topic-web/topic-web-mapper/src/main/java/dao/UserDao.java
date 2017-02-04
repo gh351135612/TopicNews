@@ -1,22 +1,30 @@
 package dao;
 
 
-import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
+import pojo.user.RegistBean;
 import pojo.user.User;
 
 import java.util.List;
 
-/**
- * Created by Zhangxq on 2016/7/15.
- */
+
 
 @Repository
 public interface UserDao {
 
-    User selectUserById(@Param("userId") Long userId);
+    String TOPIC_USER = "topic_user";
 
-    User selectUserByPhoneOrEmail(@Param("emailOrPhone") String emailOrPhone, @Param("state") Short state);
+    @Select("select * from " + TOPIC_USER + " where username = #{username}")
+    List<User> selectUserByName(String username);
 
-    List<User> selectAllUser();
+    @Insert("insert into " + TOPIC_USER + "(username,password,nickname,age,sex) values (#{username},#{password},#{nickname},#{age},#{sex})")
+    boolean insertUser(RegistBean registBean);
+
+    @Select("select count(*) from " + TOPIC_USER)
+    int count();
+
+
+
 }

@@ -3,17 +3,17 @@ package controller;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pojo.user.User;
+import org.springframework.web.bind.annotation.ResponseBody;
+import pojo.response.BasicResponse;
+import pojo.user.RegistBean;
 import service.UserService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
-/**
- * Created by Zhangxq on 2016/7/15.
- */
+
 
 @Controller
 @RequestMapping("/user")
@@ -24,10 +24,33 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/showUser")
+    @ResponseBody
     public String showUser(HttpServletRequest request, Model model){
         log.info("查询所有用户信息");
-        List<User> userList = userService.getAllUser();
-        model.addAttribute("userList",userList);
         return "showUser";
     }
+
+    @RequestMapping("/registUser")
+    @ResponseBody
+    public BasicResponse regist(@RequestBody RegistBean registBean){
+
+        return userService.regist(registBean);
+
+
+    }
+
+    @RequestMapping("/count")
+    @ResponseBody
+    public int count(){
+
+        return userService.count();
+
+    }
+
+
+
+
+
+
+
 }

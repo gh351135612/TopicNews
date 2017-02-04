@@ -5,7 +5,7 @@ package pojo.response;
  * @Date 2017/1/22 13:38
  * @Describle
  */
-public class BasicResopnse {
+public class BasicResponse {
 
     public static int SUCCESS = 200;
     public static int PARAM_ERROR = 100;
@@ -15,6 +15,13 @@ public class BasicResopnse {
     private int code;
     private String msg;
 
+    @Override
+    public String toString() {
+        return "BasicResponse{" +
+                "code=" + code +
+                ", msg='" + msg + '\'' +
+                '}';
+    }
 
     public int getCode() {
         return code;

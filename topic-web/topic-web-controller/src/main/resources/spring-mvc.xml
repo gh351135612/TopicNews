@@ -10,8 +10,11 @@
                         http://www.springframework.org/schema/mvc
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
+    <!-- 默认的注解映射的支持 -->
+    <mvc:annotation-driven />
+
     <!-- 自动扫描  @Controller-->
-    <context:component-scan base-package="controller,service,dao"/>
+    <context:component-scan base-package="controller"/>
 
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"

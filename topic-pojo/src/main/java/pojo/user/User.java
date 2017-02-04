@@ -1,91 +1,54 @@
 package pojo.user;
 
-import java.util.Date;
-
 /**
  * Created by Zhangxq on 2016/7/15.
  */
 public class User {
 
-    private Long id;
-    private String userName;
-    private String userPhone;
-    private String userEmail;
-    private String userPwd;
-    private String pwdSalt;
-    private Date createTime;
-    private Date modifyTime;
-    private Short isDelete;
+    private String username;
+    private String password;
+    private String nickname;
+    private int age;
+    private int sex;
 
-    public Long getId() {
-        return id;
+
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getUserPhone() {
-        return userPhone;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public int getAge() {
+        return age;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getUserPwd() {
-        return userPwd;
+    public int getSex() {
+        return sex;
     }
 
-    public void setUserPwd(String userPwd) {
-        this.userPwd = userPwd;
-    }
-
-    public String getPwdSalt() {
-        return pwdSalt;
-    }
-
-    public void setPwdSalt(String pwdSalt) {
-        this.pwdSalt = pwdSalt;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getModifyTime() {
-        return modifyTime;
-    }
-
-    public void setModifyTime(Date modifyTime) {
-        this.modifyTime = modifyTime;
-    }
-
-    public Short getIsDelete() {
-        return isDelete;
-    }
-
-    public void setIsDelete(Short isDelete) {
-        this.isDelete = isDelete;
+    public void setSex(int sex) {
+        this.sex = sex;
     }
 }
