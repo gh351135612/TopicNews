@@ -1,5 +1,7 @@
 package pojo.user;
 
+import java.sql.Timestamp;
+
 /**
  * Created by Zhangxq on 2016/7/15.
  */
@@ -10,7 +12,24 @@ public class User {
     private String nickname;
     private int age;
     private int sex;
+    private String headUrl;
+    private Timestamp registDate;
 
+    public String getHeadUrl() {
+        return headUrl;
+    }
+
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl;
+    }
+
+    public Timestamp getRegistDate() {
+        return registDate;
+    }
+
+    public void setRegistDate(Timestamp registDate) {
+        this.registDate = registDate;
+    }
 
     public String getUsername() {
         return username;

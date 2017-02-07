@@ -20,6 +20,12 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
 
+    /**
+     * 注册
+     *
+     * @param registBean
+     * @return
+     */
     public BasicResponse regist(RegistBean registBean) {
 
         BasicResponse basicResponse = new BasicResponse();
@@ -70,6 +76,49 @@ public class UserServiceImpl implements UserService {
 
     public int count() {
         return userDao.count();
+    }
+
+    /**
+     * 登录
+     *
+     * @param username
+     * @param password
+     * @return
+     */
+    public BasicResponse login(String username, String password) {
+
+        BasicResponse basicResponse = new BasicResponse();
+        List<User> users = userDao.selectUserByName(username);
+        if(users == null || users.size() == 0){
+
+            basicResponse.setCode(BasicResponse.OTHER_ERROR);
+            basicResponse.setMsg("当前用户不存在");
+            return basicResponse;
+
+        }
+
+        if(users.size() !=1){
+
+            basicResponse.setCode(BasicResponse.OTHER_ERROR);
+            basicResponse.setMsg("当前用户名对应的用户不唯一");
+            return basicResponse;
+
+        }
+
+        if(users.get(0).getPassword().equals(password)){
+
+            basicResponse.setCode(BasicResponse.SUCCESS);
+            basicResponse.setMsg("登录成功");
+
+        }else{
+
+            basicResponse.setCode(BasicResponse.PARAM_ERROR);
+            basicResponse.setMsg("密码错误");
+
+        }
+
+        return basicResponse;
+
     }
 
 }

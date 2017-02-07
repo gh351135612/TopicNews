@@ -33,6 +33,15 @@
             </list>
         </property>
     </bean>
+    
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/user/count"/>
+            <bean class="interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+
 
 
     <!-- 定义跳转的文件的前后缀 ，视图模式配置 -->

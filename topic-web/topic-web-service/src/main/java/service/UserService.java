@@ -13,4 +13,6 @@ public interface UserService {
 
     int count();
 
+    BasicResponse login(String username , String password);
+
 }

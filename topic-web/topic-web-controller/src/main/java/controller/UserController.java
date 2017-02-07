@@ -5,14 +5,18 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import pojo.response.BasicResponse;
 import pojo.user.RegistBean;
 import service.UserService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 
 
 @Controller
@@ -48,9 +52,42 @@ public class UserController {
     }
 
 
+    @RequestMapping("/login")
+    @ResponseBody
+    public String login(HttpSession httpSession , @RequestParam("username") String username , @RequestParam("password") String password){
 
 
 
+        httpSession.setAttribute("username",username);
+
+        return "login";
+
+    }
+
+
+    @RequestMapping("/uploadImage")
+    @ResponseBody
+    public BasicResponse uploadImage(HttpServletRequest request , @RequestParam("file") MultipartFile multipartFile){
+
+        String path = request.getSession().getServletContext().getRealPath("/") + "images";// 文件保存目录，也可自定为绝对路径
+        String fileName = multipartFile.getOriginalFilename();// getOriginalFilename和getName是不一样的哦
+        System.out.println(path);
+        File targetFile = new File(path, fileName);
+        if (!targetFile.exists()) {
+            targetFile.mkdirs();
+        }
+        try {
+            multipartFile.transferTo(targetFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        BasicResponse basicResponse = new BasicResponse();
+        basicResponse.setCode(BasicResponse.SUCCESS);
+        basicResponse.setMsg(request.getContextPath() + "/images/" + fileName);
+        return basicResponse;
+
+    }
 
 
 }
