@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>./topic-spider</module>
         <module>./topic-pojo</module>
         <module>./topic-common</module>
         <module>./topic-web</module>
